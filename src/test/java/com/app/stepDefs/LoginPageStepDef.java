@@ -1,6 +1,5 @@
 package com.app.stepDefs;
 
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -8,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
+import com.app.pages.AmazonPage;
 import com.app.pages.LoginPage;
 import com.app.utils.Utilities;
 
@@ -21,6 +21,7 @@ public class LoginPageStepDef {
 	private static WebDriver driver;
 	public final static int TIMEOUT = 10;
 	LoginPage objLoginPage = new LoginPage(Utilities.getDriver1());
+	AmazonPage objAmazonPage = new AmazonPage(Utilities.getDriver1());
 	public Scenario scenario;
 	Logger log = LogManager.getFormatterLogger(LoginPageStepDef.class);
 
@@ -37,10 +38,10 @@ public class LoginPageStepDef {
 	}
 
 	@Then("user navigates to {string}")
-	public void userNavigatesToPage(String url) {
+	public void userNavigatesToPage(String urlProp) {
 //		System.out.println(new Throwable().getStackTrace()[0].getMethodName());
 		log.info(new Throwable().getStackTrace()[0].getMethodName());
-		objLoginPage.OpenURL(url);
+		objLoginPage.OpenURL(Utilities.readProps(urlProp));
 		Utilities.ts(scenario);
 	}
 
@@ -55,6 +56,13 @@ public class LoginPageStepDef {
 	public void userLogsOutTheSystem() {
 //		System.out.println(new Throwable().getStackTrace()[0].getMethodName());
 		Assert.assertTrue(true);
+	}
+
+	@Then("user validates tab switch feature")
+	public void UserValidatesTabSwitchFeature() {
+		log.info(new Throwable().getStackTrace()[0].getMethodName());
+		objAmazonPage.searchOnAmazon("Apple iPhone 13 (128GB) - Blue", scenario);
+
 	}
 
 	@BeforeStep

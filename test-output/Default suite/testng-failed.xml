@@ -6,8 +6,8 @@
       <class name="com.app.runner.CucumberRunnerTests">
         <methods>
           <include name="setUpClass"/>
-          <include name="runScenario" invocation-numbers="0 1 2"/>
           <include name="tearDownClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.app.runner.CucumberRunnerTests -->
     </classes>

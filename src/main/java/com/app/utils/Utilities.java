@@ -2,10 +2,13 @@ package com.app.utils;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Properties;
 
 import javax.imageio.ImageIO;
 
@@ -31,24 +34,24 @@ public class Utilities {
 	private static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 	public static WebDriver driver;
 	static Logger log = LogManager.getFormatterLogger(Utilities.class);
-	static JavascriptExecutor js ;
+	static JavascriptExecutor js;
 
-	public static WebDriver getDriver() {//Using normal driver init
+	public static WebDriver getDriver() {// Using normal driver init
 //		System.out.println(new Throwable().getStackTrace()[0].getMethodName());
 		log.info(new Throwable().getStackTrace()[0].getMethodName());
 //		if (tlDriver == null) {
 
 //			System.out.println("***************Set up new browser***************");
-			log.info("***************Set up new browser***************");
-			ChromeOptions options = new ChromeOptions();
-			options.addArguments("--remote-allow-origins=*");
+		log.info("***************Set up new browser***************");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--remote-allow-origins=*");
 //			options.addArguments("--headless");
-			options.addArguments("headless");
-			WebDriverManager.chromedriver().setup();
-			tlDriver.set(new ChromeDriver(options));
+//			options.addArguments("headless");
+		WebDriverManager.chromedriver().setup();
+		tlDriver.set(new ChromeDriver(options));
 //			driver = new ChromeDriver(options);
-			getDriver1().manage().timeouts().implicitlyWait(Duration.ofMillis(20000));
-			getDriver1().manage().window().maximize();
+		getDriver1().manage().timeouts().implicitlyWait(Duration.ofMillis(20000));
+		getDriver1().manage().window().maximize();
 //			System.out.println("Driver if driver==null : "+driver);
 //		}
 //		System.out.println("Driver if not null: "+driver);
@@ -66,25 +69,25 @@ public class Utilities {
 		return getDriver1();
 	}
 
-	public static synchronized WebDriver getDriver1() {//using ThreadLocal<WebDriver>
+	public static synchronized WebDriver getDriver1() {// using ThreadLocal<WebDriver>
 		return tlDriver.get();
 	}
 
 	public static void ts(Scenario scenario) {
 //		System.out.println(new Throwable().getStackTrace()[0].getMethodName());
-		
+
 //		System.out.println("scenario.getId(): "+scenario.getId());
-		
+
 //		System.out.println("scenario.getLine();: "+scenario.getLine());
-		
+
 //		System.out.println("scenario.getName(): "+scenario.getName());
-		
+
 //		System.out.println("scenario.getSourceTagNames(): "+scenario.getSourceTagNames());
-		
+
 //		System.out.println("scenario.getStatus(): "+scenario.getStatus());
-		
+
 //		System.out.println("scenario.getUri(): "+scenario.getUri());
-		
+
 //		System.out.println("scenario.isFailed(): "+scenario.isFailed());
 		try {
 			WebDriver driver = Utilities.getDriver1();
@@ -128,18 +131,17 @@ public class Utilities {
 		LocalDateTime now = LocalDateTime.now();
 		return dtf.format(now).toString();
 	}
-	
+
 	public static void zoomToElelemnt(WebElement el) {
 		js.executeScript("arguments[0].scrollIntoView(true);", el);
 	}
-	
+
 	public static void clickToElelement(WebElement el) {
 		driver = Utilities.getDriver1();
-		js = (JavascriptExecutor)driver;
+		js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView(true);", el);
 		el.click();
 	}
-
 
 	public String timePrint() {
 //		System.out.println(new Throwable().getStackTrace()[0].getMethodName());
@@ -147,6 +149,42 @@ public class Utilities {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMMyyyy_HH-mm-ss");
 		LocalDateTime now = LocalDateTime.now();
 		return dtf.format(now).toString();
+	}
+
+	public String propsReader(String keyTerm) {
+		String returnString = "";
+		String propsPath = "C:/all-props/config.properties";
+
+		try {
+			FileInputStream fis = new FileInputStream(new File(propsPath));
+			Properties props = new Properties();
+			props.load(fis);
+			returnString = props.getProperty(keyTerm);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return returnString;
+	}
+
+	public static String readProps(String propName) {
+
+		String propsPath = "src/test/resources/config.properties";
+
+		String returnString = "";
+		try {
+			FileInputStream fis = new FileInputStream(new File(propsPath));
+			Properties props = new Properties();
+			props.load(fis);
+			returnString = props.getProperty(propName);
+			log.info("Property read for: " + propName + "and returned value: " + returnString);
+			fis.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+		return returnString;
 	}
 
 }

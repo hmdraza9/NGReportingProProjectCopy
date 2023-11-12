@@ -1,5 +1,7 @@
 package com.app.stepDefs;
 
+import java.io.IOException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -17,7 +19,7 @@ public class MoneyCtrlPageStepDef {
 	Logger log = LogManager.getFormatterLogger(MoneyCtrlPageStepDef.class);
 
 	@Then("fetch {string} for company {string}")
-	public void userNavigatesToPage(String paramValue, String companyName) throws InterruptedException {
+	public void userNavigatesToPage(String paramValue, String companyName) throws InterruptedException, IOException {
 //		System.out.println(new Throwable().getStackTrace()[0].getMethodName());
 		log.info(new Throwable().getStackTrace()[0].getMethodName());
 		objMoneyCtrlPage.fetchTodayStock(paramValue, companyName, scenario);

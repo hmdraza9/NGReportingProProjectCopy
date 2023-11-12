@@ -1,49 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
     <line>
-      <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-23-38.png' height='600' width='800'/></br>]]>
+      <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-55-32.png' height='1772' width='3456'/></br>]]>
     </line>
     <line>
-      <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-23-52.png' height='600' width='800'/></br>]]>
+      <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-56-30.png' height='1772' width='3456'/></br>]]>
     </line>
     <line>
-      <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-24-03.png' height='600' width='800'/></br>]]>
+      <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-57-03.png' height='1772' width='3456'/></br>]]>
     </line>
     <line>
-      <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-24-13.png' height='600' width='800'/></br>]]>
+      <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-57-36.png' height='1772' width='3456'/></br>]]>
     </line>
     <line>
-      <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-24-18.png' height='600' width='800'/></br>]]>
+      <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-58-07.png' height='1772' width='3456'/></br>]]>
     </line>
     <line>
-      <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-24-24.png' height='600' width='800'/></br>]]>
+      <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-58-36.png' height='1772' width='3456'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-59-07.png' height='1772' width='3456'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-59-34.png' height='1772' width='3456'/></br>]]>
+    </line>
+    <line>
+      <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_19-00-00.png' height='1772' width='3456'/></br>]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-07-30T18:23:23 IST" name="Default suite" finished-at="2023-07-30T18:24:31 IST" duration-ms="68340">
+  <suite started-at="2023-11-12T18:54:51 IST" name="Default suite" finished-at="2023-11-12T19:00:09 IST" duration-ms="317440">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.app.runner.CucumberRunnerTests@1ed4ae0f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.app.runner.CucumberRunnerTests@33d512c1]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2023-07-30T18:23:23 IST" name="Default test" finished-at="2023-07-30T18:24:31 IST" duration-ms="68340">
+    <test started-at="2023-11-12T18:54:51 IST" name="Default test" finished-at="2023-11-12T19:00:09 IST" duration-ms="317440">
       <class name="com.app.runner.CucumberRunnerTests">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.app.runner.CucumberRunnerTests@1ed4ae0f]" started-at="2023-07-30T18:23:23 IST" name="setUpClass" finished-at="2023-07-30T18:23:24 IST" duration-ms="888" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.app.runner.CucumberRunnerTests@33d512c1]" started-at="2023-11-12T18:54:51 IST" name="setUpClass" finished-at="2023-11-12T18:54:52 IST" duration-ms="781" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@52b30dcd]]>
+                <![CDATA[org.testng.TestRunner@2d705998]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.app.runner.CucumberRunnerTests@1ed4ae0f]" started-at="2023-07-30T18:23:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-30T18:23:39 IST" duration-ms="14711" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.app.runner.CucumberRunnerTests@33d512c1]" started-at="2023-11-12T18:54:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-12T19:00:00 IST" duration-ms="308313" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA["Logging in to the system scenrio one"]]>
+                <![CDATA["Selenium 4 features test"]]>
               </value>
             </param>
             <param index="1">
@@ -54,58 +63,35 @@
           </params>
           <reporter-output>
             <line>
-              <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-23-38.png' height='600' width='800'/></br>]]>
+              <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-55-32.png' height='1772' width='3456'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-56-30.png' height='1772' width='3456'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-57-03.png' height='1772' width='3456'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-57-36.png' height='1772' width='3456'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-58-07.png' height='1772' width='3456'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-58-36.png' height='1772' width='3456'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-59-07.png' height='1772' width='3456'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_18-59-34.png' height='1772' width='3456'/></br>]]>
+            </line>
+            <line>
+              <![CDATA[<br><img src='/Users/hraza/Documents/GitClones/TestGitClones/NGReportingProProjectCopy/Screenshots/12-Nov-2023/Selenium 4_12Nov2023_19-00-00.png' height='1772' width='3456'/></br>]]>
             </line>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.app.runner.CucumberRunnerTests@1ed4ae0f]" started-at="2023-07-30T18:23:39 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-30T18:23:52 IST" duration-ms="13705" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Logging in to the system scenrio two"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login feature"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-23-52.png' height='600' width='800'/></br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.app.runner.CucumberRunnerTests@1ed4ae0f]" started-at="2023-07-30T18:23:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-07-30T18:24:24 IST" duration-ms="31848" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Logging in to the system scenrio three"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Login feature"]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-            <line>
-              <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-24-03.png' height='600' width='800'/></br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-24-13.png' height='600' width='800'/></br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-24-18.png' height='600' width='800'/></br>]]>
-            </line>
-            <line>
-              <![CDATA[<br><img src='C:\GitClones\CucuTestNGReportingProProject\NewProject/Screenshots/30-Jul-2023/Logging in_30Jul2023_18-24-24.png' height='600' width='800'/></br>]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.app.runner.CucumberRunnerTests@1ed4ae0f]" started-at="2023-07-30T18:24:24 IST" name="tearDownClass" finished-at="2023-07-30T18:24:31 IST" duration-ms="7151" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.app.runner.CucumberRunnerTests@33d512c1]" started-at="2023-11-12T19:00:00 IST" name="tearDownClass" finished-at="2023-11-12T19:00:09 IST" duration-ms="8279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
