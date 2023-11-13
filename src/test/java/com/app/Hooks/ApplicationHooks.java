@@ -26,7 +26,7 @@ public class ApplicationHooks {
 	@After("@UI")
 	public static void After_UI() throws IOException {
 //		System.out.println(new Throwable().getStackTrace()[0].getMethodName());
-		log.info(new Throwable().getStackTrace()[0].getMethodName());
+		log.error(new Throwable().getStackTrace()[0].getMethodName());
 		Utilities.tearDown();
 	}
 

@@ -1,10 +1,15 @@
 package com.app.pages;
 
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
+import java.util.Set;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WindowType;
 
 import com.app.utils.Utilities;
 import com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter;
@@ -34,6 +39,61 @@ public class AmazonPage {
 	String pageTitle = "";
 	String productLabel = "";
 	String productPagePriceLabel = "";
+
+	public void practiceRelLocators() throws InterruptedException {
+
+		driver.get(Utilities.readProps("URL.amazon"));
+		log.info("************Page Source************\nLength: " + driver.getPageSource().length() + ";\n"
+				+ driver.getPageSource().substring(2222) + "\n\n\n\n");
+		Thread.sleep(3222);
+		driver.findElement(with(By.cssSelector("input#twotabsearchtextbox.nav-input.nav-progressive-attributes"))
+				.near(By.cssSelector("input#nav-search-submit-button.nav-input.nav-progressive-attribute")))
+				.sendKeys("hello");
+		driver.findElement(with(By.cssSelector("input#twotabsearchtextbox.nav-input.nav-progressive-attributes"))
+				.near(By.cssSelector("input#nav-search-submit-button.nav-input.nav-progressive-attribute")))
+				.sendKeys("world");
+
+	}
+
+	public void practiceWindowTypes(Scenario scenario) throws InterruptedException {
+
+		driver.get(Utilities.readProps("URL.amazon"));
+
+		parentWindow = driver.getWindowHandle();
+
+		driver.switchTo().newWindow(WindowType.TAB);
+
+		driver.switchTo().newWindow(WindowType.WINDOW);
+
+//		driver.switchTo().newWindow(WindowType.);
+
+		System.out.println("Parent window handle: " + parentWindow);
+
+		Set<String> winSet = driver.getWindowHandles();
+
+		for (String str : winSet) {
+
+			if (!str.equalsIgnoreCase(parentWindow)) {
+				driver.switchTo().window(str);
+				log.info("Child window handle: " + str + "; window type:" + WindowType.TAB + " driver hashcode: "
+						+ driver);
+				driver.get("https://www.google.com");
+				driver.findElement(By.name("q")).sendKeys(str);
+
+				// relative locators
+				log.info("Inner HTML: "
+						+ driver.findElement(with(By.tagName("input")).near(By.name("q"))).getAttribute("innerHTML"));
+
+				driver.findElement(By.name("q")).submit();
+				Thread.sleep(2500);
+				Utilities.ts(scenario);
+				driver.close();
+				driver.switchTo().window(parentWindow);
+
+			}
+		}
+
+	}
 
 	public void searchOnAmazon(String keyword, Scenario scenario) {
 

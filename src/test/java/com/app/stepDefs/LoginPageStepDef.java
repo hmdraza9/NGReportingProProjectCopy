@@ -65,6 +65,20 @@ public class LoginPageStepDef {
 
 	}
 
+	@Then("user practices the relative locators in selenium 4")
+	public void userPracticesTheRelativeLocatorsInSelenium_4() throws InterruptedException {
+		log.info(new Throwable().getStackTrace()[0].getMethodName());
+		objAmazonPage.practiceRelLocators();
+
+	}
+
+	@Then("user practices the types of windows in selenium 4")
+	public void userPracticestypesOfWindowsInSelenium_4() throws InterruptedException {
+		log.info(new Throwable().getStackTrace()[0].getMethodName());
+		objAmazonPage.practiceWindowTypes(scenario);
+
+	}
+
 	@BeforeStep
 	public void BeforeStep(Scenario scenario) {
 //		System.out.println(new Throwable().getStackTrace()[0].getMethodName());

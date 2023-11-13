@@ -30,5 +30,7 @@ Background:
   Scenario: Selenium 4 features test
     Then user navigates to "URL.amazon"
     Then user validates tab switch feature
+    Then user practices the relative locators in selenium 4
+    Then user practices the types of windows in selenium 4
     
     

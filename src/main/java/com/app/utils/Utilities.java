@@ -103,7 +103,43 @@ public class Utilities {
 			int width = bimb.getWidth();
 			Reporter.log("<br><img src='" + currScrPath + "' height='" + height + "' width='" + width + "'/></br>");
 			byte[] fileContent = FileUtils.readFileToByteArray(currScr);
-			scenario.attach(fileContent, "image/png", null);
+			scenario.attach(fileContent, "image/png", scenario.getName());
+		} catch (WebDriverException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void ts(Scenario scenario, WebDriver driver) {
+//		System.out.println(new Throwable().getStackTrace()[0].getMethodName());
+
+//		System.out.println("scenario.getId(): "+scenario.getId());
+
+//		System.out.println("scenario.getLine();: "+scenario.getLine());
+
+//		System.out.println("scenario.getName(): "+scenario.getName());
+
+//		System.out.println("scenario.getSourceTagNames(): "+scenario.getSourceTagNames());
+
+//		System.out.println("scenario.getStatus(): "+scenario.getStatus());
+
+//		System.out.println("scenario.getUri(): "+scenario.getUri());
+
+//		System.out.println("scenario.isFailed(): "+scenario.isFailed());
+		try {
+			TakesScreenshot screenshot = (TakesScreenshot) driver;
+			File scrFile = screenshot.getScreenshotAs(OutputType.FILE);
+			String currScrPath = System.getProperty("user.dir") + "/Screenshots/" + timePrint("dd-MMM-yyyy") + "/"
+					+ scenario.getName().substring(0, 10) + "_" + timePrint(null) + ".png";
+			File currScr = new File(currScrPath);
+			FileUtils.copyFile(scrFile, currScr);
+			BufferedImage bimb = ImageIO.read(currScr);
+			int height = bimb.getHeight();
+			int width = bimb.getWidth();
+			Reporter.log("<br><img src='" + currScrPath + "' height='" + height + "' width='" + width + "'/></br>");
+			byte[] fileContent = FileUtils.readFileToByteArray(currScr);
+			scenario.attach(fileContent, "image/png", scenario.getName());
 		} catch (WebDriverException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
