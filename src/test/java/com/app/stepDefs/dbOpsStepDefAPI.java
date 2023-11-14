@@ -15,7 +15,6 @@ public class dbOpsStepDefAPI {
 	Logger log = LogManager.getFormatterLogger(dbOpsStepDefAPI.class);
 	LoginPage objLoginPage = new LoginPage(Utilities.getDriver1());
 
-
 	@Then("^user multiplies \"(.*)\" and \"(.*)\"$")
 	public void userMultipliesTwoNumbers(String num1, String num2) {
 //		System.out.println(new Throwable().getStackTrace()[0].getMethodName());
@@ -23,7 +22,8 @@ public class dbOpsStepDefAPI {
 		num2 = num2.replace("<", "").replace(">", "");
 //		System.out.println("Number 1: "+num1+"; Number 2: "+num2);
 //		System.out.println("Multiplication of numbers Number 1: "+num1+"; Number 2: "+num2+" is: "+Integer.parseInt(num1)*Integer.parseInt(num2));
-		log.info("Multiplication of numbers Number 1: "+num1+"; Number 2: "+num2+" is: "+Integer.parseInt(num1)*Integer.parseInt(num2));
+		log.info("Multiplication of numbers Number 1: " + num1 + "; Number 2: " + num2 + " is: "
+				+ Integer.parseInt(num1) * Integer.parseInt(num2));
 	}
 
 	@Then("tests pipe separated params")
@@ -35,7 +35,14 @@ public class dbOpsStepDefAPI {
 //		for(String str : data) {
 //			System.out.println("Data value: "+str);
 //		}
+
+	}
+
+	@Then("Non UI test step")
+	public void NonUITestStep() {
 		
+		System.out.println("Value: "+Utilities.readProps("URL.amazon"));
+
 	}
 
 }

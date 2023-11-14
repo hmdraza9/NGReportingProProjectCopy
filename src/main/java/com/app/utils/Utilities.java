@@ -35,13 +35,10 @@ public class Utilities {
 	public static WebDriver driver;
 	static Logger log = LogManager.getFormatterLogger(Utilities.class);
 	static JavascriptExecutor js;
+	private static String resourcePath = "src/test/resources";
 
 	public static WebDriver getDriver() {// Using normal driver init
-//		System.out.println(new Throwable().getStackTrace()[0].getMethodName());
 		log.info(new Throwable().getStackTrace()[0].getMethodName());
-//		if (tlDriver == null) {
-
-//			System.out.println("***************Set up new browser***************");
 		log.info("***************Set up new browser***************");
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--remote-allow-origins=*");
@@ -206,7 +203,7 @@ public class Utilities {
 
 	public static String readProps(String propName) {
 
-		String propsPath = "src/test/resources/config.properties";
+		String propsPath = resourcePath + "/Properties/config.properties";
 
 		String returnString = "";
 		try {
